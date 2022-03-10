@@ -24,10 +24,6 @@
         var next = $('#__next');
         next.children(":last").remove();
         },0);
-
-        setTimeout(function() {
-
-        }, 5000);
     }
 
     // Your code here...
