@@ -13,12 +13,13 @@
     var currentUrl = window.location.href;
     var text = /jianshu.com\/p\//;
     if(text.test(currentUrl)){
-        var artical = $('#__next [role="main"]');
-        $("header").remove();
-        $("footer").next().remove();
-        $("footer").remove();
+
 
         setTimeout(function(){
+            var artical = $('#__next [role="main"]');
+            $("header").remove();
+            $("footer").next().remove();
+            $("footer").remove();
             artical.children(":last").remove();
             artical.children(":first").css("width","1024px");
             var next = $('#__next');
