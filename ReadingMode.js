@@ -14,16 +14,16 @@
     var text = /jianshu.com\/p\//;
     if(text.test(currentUrl)){
         setTimeout(function(){
-        var artical = $('#__next [role="main"]');
-        $("header").remove();
-        $("footer").next().remove();
-        $("footer").remove();
-        artical.children(":last").remove();
-        artical.children(":first").css("width","1024px");
+            var artical = $('#__next [role="main"]');
+            $("header").remove();
+            $("footer").next().remove();
+            $("footer").remove();
+            artical.children(":last").remove();
+            artical.children(":first").css("width","1024px");
 
-        var next = $('#__next');
-        next.children(":last").remove();
-        },0);
+            var next = $('#__next');
+            next.children(":last").remove();
+        },1000);
     }
 
     // Your code here...
