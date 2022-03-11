@@ -14,25 +14,16 @@
     var text = /jianshu.com\/p\//;
     if(text.test(currentUrl)){
 
+        var artical = $('#__next [role="main"]');
+        $("header").remove();
+        $("footer").next().remove();
+        $("footer").remove();
 
-        setTimeout(function() {
-            var artical = $('#__next [role="main"]');
-            $("header").remove();
-            $("footer").next().remove();
-            $("footer").remove();
+        artical.children("aside").remove();
+        artical.children(":first").css("width","1024px");
 
-            artical.children("aside").remove();
-            artical.children(":first").css("width","1024px");
-
-            var next = $('#__next');
-            next.children(":last").remove();
-        },0);
-
-        setTimeout(function() {
-            var artical = $('#__next [role="main"]');
-            artical.children(":first").children(":first").children(":last").remove();
-            artical.children(":first").children(":first").children(":last").remove();
-        }, 2000);
+        var next = $('#__next');
+        next.children(":last").remove();
     }
 
 })();
